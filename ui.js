@@ -14,6 +14,7 @@ function render() {
     const listEl = document.createElement("div");
     listEl.className = "list";
 
+    // ---- Header ----
     const header = document.createElement("div");
     header.className = "list-header";
     header.textContent = list.name;
@@ -25,6 +26,7 @@ function render() {
 
     listEl.appendChild(header);
 
+    // ---- Content ----
     if (!list.minimized) {
       const tasksEl = document.createElement("div");
       tasksEl.className = "list-tasks";
@@ -32,10 +34,20 @@ function render() {
       list.tasks.forEach(task => {
         const taskEl = document.createElement("div");
         taskEl.className = "task";
-        taskEl.textContent = task;
+        taskEl.textContent = task.text;
         tasksEl.appendChild(taskEl);
       });
 
+      const addTaskBtn = document.createElement("button");
+      addTaskBtn.textContent = "+ Add task";
+
+      addTaskBtn.addEventListener("click", () => {
+        const text = prompt("Task?");
+        if (!text) return;
+        addTaskToList(list.id, text);
+      });
+
+      tasksEl.appendChild(addTaskBtn);
       listEl.appendChild(tasksEl);
     }
 

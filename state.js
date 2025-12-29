@@ -11,3 +11,15 @@ function createList(name) {
   });
   saveState();
 }
+
+function addTaskToList(listId, taskText) {
+  const list = state.lists.find(l => l.id === listId);
+  if (!list) return;
+
+  list.tasks.push({
+    id: crypto.randomUUID(),
+    text: taskText
+  });
+
+  saveState();
+}

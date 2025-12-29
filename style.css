@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f6f7f4;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#top-pane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#focus-pane,
+#body-doubling-pane {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+#lists-pane {
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.list {
+  background: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.list-tasks {
+  margin-top: 0.5rem;
+}
+
+.task {
+  padding: 0.25rem 0;
+}
+
+.placeholder {
+  color: #777;
+  font-style: italic;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fantasy To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main id="app">
+
+    <section id="top-pane">
+
+      <section id="focus-pane">
+        <h2>Focus</h2>
+        <div id="focus-slots">
+          <p class="placeholder">Drag tasks here when you’re ready.</p>
+        </div>
+      </section>
+
+      <section id="body-doubling-pane">
+        <h2>Companion</h2>
+        <div id="body-doubling-content">
+          <p>You are not alone.</p>
+        </div>
+      </section>
+
+    </section>
+
+    <section id="lists-pane">
+      <h2>Your Lists</h2>
+      <div id="lists-container"></div>
+      <button id="add-list-btn">+ New List</button>
+    </section>
+
+  </main>
+
+  <script src="js/state.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+
+</body>
+</html>
